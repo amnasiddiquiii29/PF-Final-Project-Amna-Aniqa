@@ -170,6 +170,11 @@ void checkBudget(double total, double cost, double& totalBill)
 
 	cout << "Enter your budget: " << endl;
 	cin >> budget;
+	while (budget <= 0)
+{
+	cout << "Invalid budget. Please enter a value greater than 0 ";
+	cin >> budget;
+}
 
 	if (budget >= totalBill) {
 		budgetStatus = "within the limit";
@@ -226,6 +231,7 @@ int main()
 	}
 	if (choice == 3)
 	{
+		cout << "Goodbye! Thank you for using the trip planner." << endl;
 		return 0;
 	}
 
